@@ -1,0 +1,26 @@
+.total-row {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.total-row td:last-of-type {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.checkout-btn {
+  margin-top: 1rem;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.checkout-btn:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+td,th{
+  text-align: center;
+}

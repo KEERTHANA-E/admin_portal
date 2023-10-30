@@ -1,0 +1,44 @@
+<main class="d-flex m-5">
+    <div class="container d-flex flex-column">
+        <div class="row">
+            <div class="mx-auto d-table">
+                <div class="d-table-cell align-middle">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="m-sm-3">
+                                <form [formGroup]="userData" (submit)="createUser()">
+                                    <div class="row mb-3">
+                                        <label class="form-label">User Name</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-title"
+                                            formControlName="name" placeholder="Enter your name" value="" />
+                                        <span style="color: red"
+                                            *ngIf="userData.get('name')?.dirty && !userData.get('name')?.valid">Please
+                                            enter valid name</span>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="form-label">Role</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-des"
+                                            formControlName="role" placeholder="Enter your role" />
+                                        <span style="color: red"
+                                            *ngIf="userData.get('role')?.dirty && !userData.get('role')?.valid">Please
+                                            enter valid role</span>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="form-label">Age</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-des"
+                                            formControlName="age" placeholder="Enter your age" />
+                                        <span style="color: red"
+                                            *ngIf="userData.get('age')?.dirty && !userData.get('age')?.valid">Please
+                                            enter valid age</span>
+                                    </div>
+                                    <button type="submit" class="btn btn-lg btn-primary">Create User</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

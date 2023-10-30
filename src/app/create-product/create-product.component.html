@@ -1,0 +1,44 @@
+<main class="d-flex m-5">
+    <div class="container d-flex flex-column">
+        <div class="row">
+            <div class="mx-auto d-table">
+                <div class="d-table-cell align-middle">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="m-sm-3">
+                                <form [formGroup]="prodData" (submit)="createProduct()">
+                                    <div class="row mb-3">
+                                        <label class="form-label">Product title</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-title"
+                                            formControlName="title" placeholder="Enter your title" value="" />
+                                        <span style="color: red"
+                                            *ngIf="prodData.get('title')?.dirty && !prodData.get('title')?.valid">Please
+                                            enter valid title</span>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="form-label">Product description</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-des"
+                                            formControlName="des" placeholder="Enter your description" />
+                                        <span style="color: red"
+                                            *ngIf="prodData.get('des')?.dirty && !prodData.get('des')?.valid">Please
+                                            enter valid description</span>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="form-label">Product price</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-des"
+                                            formControlName="price" placeholder="Enter your description" />
+                                        <span style="color: red"
+                                            *ngIf="prodData.get('price')?.dirty && !prodData.get('price')?.valid">Please
+                                            enter valid price</span>
+                                    </div>
+                                    <button type="submit" class="btn btn-lg btn-primary">Create Product</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

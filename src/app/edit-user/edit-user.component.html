@@ -1,0 +1,32 @@
+<main class="d-flex m-5">
+    <div class="container d-flex flex-column">
+        <div class="row">
+            <div class="mx-auto d-table">
+                <div class="d-table-cell align-middle">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="m-sm-3">
+                                <form [formGroup]="userData" (submit)="editUser()">
+                                    <div class="row mb-3">
+                                        <label class="form-label">User Name</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-title" formControlName="name"/>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="form-label">Role</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-des" formControlName="role"/>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="form-label">Age</label>
+                                        <input class="form-control form-control-lg" type="text" name="product-des" formControlName="age"/>
+                                    </div>
+                                    <button type="submit" class="btn btn-lg btn-primary">Update User</button>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

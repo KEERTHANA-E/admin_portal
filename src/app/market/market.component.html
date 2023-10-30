@@ -1,0 +1,31 @@
+<div class="card shadow mb-4 row">
+    <div class="card-header row">
+        <h4 class="font-weight-bold text-dark text-center">Products in Market</h4>
+        <!-- <button class="btn btn-primary col-sm-3" routerLink="create">create one</button> -->
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>price</th>
+                        <th>edit</th>
+                        <th>view</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let x of currentProduct">
+                        <td>{{x?.id}}</td>
+                        <td>{{x?.title}}</td>
+                        <td>{{x?.des}}</td>
+                        <td>{{x?.price}}</td>
+                        <td><button class="btn btn-primary" routerLink="edit/{{x?.id}}">edit</button></td>
+                        <td><button class="btn btn-primary" routerLink="{{x?.id}}">view</button></td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col mt-0">
+        <h5 class="card-title">{{card?.title}}</h5>
+      </div>
+
+      <div class="col-auto">
+        <div class="stat text-primary">
+          <i class="align-middle" *ngIf="card?.title=='Sales'" data-feather="truck"></i>
+          <i class="align-middle" *ngIf="card?.title=='Visitors'" data-feather="users"></i>
+          <i class="align-middle" *ngIf="card?.title=='Earnings'" data-feather="dollar-sign"></i>
+          <i class="align-middle" *ngIf="card?.title=='Orders'" data-feather="shopping-cart"></i>
+        </div>
+      </div>
+    </div>
+    <h1 class="mt-1 mb-3">{{card?.count}}</h1>
+    <div class="mb-0">
+
+      <span class="text-danger" *ngIf="card?.flag==0"> <i class="mdi mdi-arrow-bottom-right"></i> -{{card?.percent}}%
+      </span>
+      <span class="text-success" *ngIf="card?.flag==1"> <i class="mdi mdi-arrow-bottom-right"></i> {{card?.percent}}%
+      </span>
+      <span class="text-muted">Since last week</span>
+    </div>
+  </div>
+</div>

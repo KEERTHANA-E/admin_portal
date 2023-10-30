@@ -1,0 +1,45 @@
+<div class="card shadow mb-4 row">
+    <div class="card-header row">
+        <h4 class="font-weight-bold text-dark text-center">Products in Cart</h4>
+        <!-- <button class="btn btn-primary col-sm-3" routerLink="create">create one</button> -->
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            <table class="table table-bordered" id="dataTable" width="100%">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of this.prodService.cart">
+                        <td>{{item.e.title}}</td>
+                        <td>{{item.e.price.toFixed(2)}}</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm decrease-quantity"
+                                (click)="decreaseCount(item)">-</button>
+                            <span class="quantity">{{item.quantity}}</span>
+                            <button class="btn btn-secondary btn-sm increase-quantity"
+                                (click)="increaseCount(item)">+</button>
+                        </td>
+                        <td>$<span class="total">{{(item.e.price * item.quantity).toFixed(2)}}</span></td>
+                        <td><button class="btn btn-danger btn-sm remove-item" (click)="removeProd(item)">Remove</button>
+                        </td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="3">Total price:</td>
+                        <td colspan="2">${{this.prodService.total.toFixed(2)}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <button class="btn btn-primary checkout-btn ">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>

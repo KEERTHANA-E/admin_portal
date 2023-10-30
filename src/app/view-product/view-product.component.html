@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card h-100">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{currentProduct.title}}</h5>
+      <p class="card-text" >{{currentProduct.des}}</p>
+      <h6 class="card-subtitle mb-2 text-muted"><b>${{currentProduct.price}}</b></h6>
+      <button class="btn btn-primary" (click)="buyNow(currentProduct)">buy now</button>
+    </div>
+  </div>
+</div>
+<!-- <div class="card h-100 col-lg-4" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{currentProduct.title}}</h6>
+    <p class="card-text">{{currentProduct.des}}</p>
+    <h6>{{currentProduct.price}}</h6>
+    <button class="btn btn-primary" (click)="buyNow(currentProduct)">buy now</button>
+  </div>
+</div> -->
